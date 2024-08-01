@@ -1,0 +1,88 @@
+---
+ layout: 'base.njk'
+ title: Equipment Master List
+---
+
+<section class="px-[10%]">
+   
+
+<p class=" py-8 font-semibold text-4xl text-center ">EQUIPMENT MASTER LIST</p>
+
+{%- for equipment in collections.equipment -%}
+<div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xl text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                     EQ Code</th>
+                <th scope="col" class="px-6 py-3">
+                    EQUIPMENT
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    MAKE
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    MODEL
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    SERIAL
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    WEIGHT
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    CAPACITY
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    TEAM/OPERATOR
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    LOCATION STATUS
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    REMARKS
+                </th>    
+               
+        </thead>
+        <tbody>
+            <tr class="uppercase bg-white border-b dark:bg-zinc-300 dark:border-gray-600  text-gray-900">
+                <th scope="row" class="px-6 py-2 font-medium ">
+                   {{ equipment.data.title }}
+                </th>
+                <td class="px-6 py-4">
+                    {{equipment.data.equipment}}
+                </td>
+                <td class="px-6 py-4">
+                    {{ equipment.data.maker }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ equipment.data.model}}
+                </td>
+                <td class="px-6 py-4">
+                    {{ equipment.data.serial }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ equipment.data.weight }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ equipment.data.capacity }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ equipment.data.team }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ equipment.data.location }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ equipment.data.remarks }}
+                </td>
+             
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
+ 
+{%- endfor -%}
+   
+</section>
