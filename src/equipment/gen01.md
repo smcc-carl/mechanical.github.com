@@ -1,5 +1,5 @@
 ---
- title: GEN-01
+ code: GEN-01
  equipment: GENERATOR
  maker: denyo
  model: DCA-60ES12
@@ -9,4 +9,5 @@
  team: electrical team
  location: MOS PR7-94 cast-in-situ
  remarks: 
+ tags: list
 ---

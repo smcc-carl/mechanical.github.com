@@ -1,81 +1,72 @@
 ---
  layout: 'base.njk'
- title: Equipment Master List
+ title: Equipment Report
 ---
 
 <section class="px-[10%]">
    
 
-<p class=" py-8 font-semibold text-4xl text-center ">EQUIPMENT MASTER LIST</p>
+<p class=" py-8 font-semibold text-4xl text-center ">EQUIPMENT Maintenance Report</p>
 
-{%- for equipment in collections.list -%}
+{%- for equipment in collections.report -%}
 <div class="relative overflow-x-auto">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead class="text-xl text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                     EQ Code</th>
+                     JOB ORDER #</th>
                 <th scope="col" class="px-6 py-3">
-                    EQUIPMENT
+                    CODE
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    MAKE
+                    DATE REPORTED
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    MODEL
+                    PROBLEMS / ISSUE
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    SERIAL
+                    ASSESSMENT
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    WEIGHT
+                    PARTS
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    CAPACITY
+                    STATUS
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    TEAM/OPERATOR
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    LOCATION STATUS
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    REMARKS
-                </th>    
+                    REPORT                </th>
+             
+                 
                
         </thead>
         <tbody>
             <tr class="uppercase bg-white border-b dark:bg-zinc-300 dark:border-gray-600  text-gray-900">
-                <th scope="row" class="px-6 py-2 font-medium ">
-                   {{ equipment.data.code }}
-                </th>
+            
                 <td class="px-6 py-4">
-                    {{equipment.data.equipment}}
+                    {{ equipment.data.job }}
                 </td>
                 <td class="px-6 py-4">
-                    {{ equipment.data.maker }}
+                    {{ equipment.data.code }}
                 </td>
                 <td class="px-6 py-4">
-                    {{ equipment.data.model}}
+                    {{ equipment.data.date_report}}
                 </td>
                 <td class="px-6 py-4">
-                    {{ equipment.data.serial }}
+                    {{ equipment.data.problems }}
                 </td>
                 <td class="px-6 py-4">
-                    {{ equipment.data.weight }}
+                    {{ equipment.data.assessment }}
                 </td>
                 <td class="px-6 py-4">
-                    {{ equipment.data.capacity }}
+                    {{ equipment.data.parts }}
                 </td>
                 <td class="px-6 py-4">
-                    {{ equipment.data.team }}
+                    {{ equipment.data.status }}
                 </td>
                 <td class="px-6 py-4">
-                    {{ equipment.data.location }}
+                   <a href="{{ equipment.data.file }}">View Report</a> 
                 </td>
-                <td class="px-6 py-4">
-                    {{ equipment.data.remarks }}
-                </td>
+              
              
             </tr>
            
