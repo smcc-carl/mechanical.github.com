@@ -4,9 +4,22 @@ title: SMCC Motorpool
 ---
 
 
-<section class="">
+<section class="px-">
 
    <p class="text-center text-5xl font-semibold uppercase mt-20">M&E Data Center</p>
 
-   
+   <div class="px-[10%]">
+      <p class="py-8 text-2xl text-slate-600 font-semibold">LATEST MATERIAL REQUEST</p>
+      
+   </div>
+{%- for equipment.collections.all -%}
+   <div class="">
+      <a href="/"><ul>
+         <li>
+            <i class="fa-regular fa-file"></i>
+         </li>
+      </ul>
+      </a>
+   </div>
+   {%- endfor -%}
 </section>

@@ -1,79 +1,86 @@
 ---
  layout: 'base.njk'
- title: Equipment Report
+ title: Material Request
 ---
 
-<section class="px-[10%]">
-   
+<section class="px-[5%]">
+    <p class=" py-8 font-semibold text-4xl text-center ">EQUIPMENT REPORT MONITORING</p>
 
-<p class=" py-8 font-semibold text-4xl text-center ">EQUIPMENT Maintenance Report</p>
-
-{%- for equipment in collections.report -%}
-<div class="relative overflow-x-auto">
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xl text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" class="px-6 py-3">
-                     JOB ORDER #</th>
-                <th scope="col" class="px-6 py-3">
-                    CODE
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    DATE REPORTED
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    PROBLEMS / ISSUE
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    ASSESSMENT
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    PARTS
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    STATUS
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    REPORT                </th>
-             
-                 
-               
-        </thead>
-        <tbody>
-            <tr class="uppercase bg-white border-b dark:bg-zinc-300 dark:border-gray-600  text-gray-900">
-            
-                <td class="px-6 py-4">
-                    {{ equipment.data.job }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ equipment.data.code }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ equipment.data.date_report}}
-                </td>
-                <td class="px-6 py-4">
-                    {{ equipment.data.problems }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ equipment.data.assessment }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ equipment.data.parts }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ equipment.data.status }}
-                </td>
-                <td class="px-6 py-4">
-                   <a href="{{ equipment.data.file }}">View Report</a> 
-                </td>
-              
-             
-            </tr>
-           
-        </tbody>
-    </table>
-</div>
- 
-{%- endfor -%}
-   
+    <div>
+        <form action="" class="px-4 py-3 w-[100%] rounded-full flex gap-10 items-center mb-10" >
+            <label for="" class="text-xl text-gray-500 font-semibold">Search </label>
+            <input type="text" placeholder="Type equipment code to view report..." class="pl-6 py-2 w-[100%] rounded-3xl italic border-slate-400">
+        </form>
+    </div>
+        
+        {%- for equipment in collections.report | reverse-%}
+        <div class="relative overflow-x-auto">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-normal text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                             JOB ORDER NO.</th>
+                        <th scope="col" class="px-6 py-3">
+                            EQPT-CODE </th>
+                        <th scope="col" class="px-6 py-3">
+                            DATE REPORTED
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            PROBLEMS / ISSUE
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            ASSESSMENT
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            PARTS NEEDED
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            STATUS
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            FILES
+                        </th>
+                      
+                     
+                         
+                       
+                </thead>
+                <tbody>
+                    <tr class="uppercase bg-white border-b dark:bg-zinc-200 dark:border-gray-400  text-gray-900">
+                    
+                        <td class="px-6 py-4">
+                            {{ equipment.data.job }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ equipment.data.code }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ equipment.data.date_report}}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ equipment.data.problems }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ equipment.data.assessment }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ equipment.data.parts }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ equipment.data.status }}
+                        </td>
+                        <td class="">
+                           <a href="{{ equipment.data.file }}" class="bg-zinc-500 px-6 py-4 rounded-3xl text-white">View Report</a> 
+                        </td>
+                      
+                     
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+         
+        {%- endfor -%}
+        
+        
 </section>

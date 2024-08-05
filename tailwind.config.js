@@ -2,7 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{html,js,njk}"],
   theme: {
-    extend: {require:'daisyui'},
+    extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }

@@ -6,7 +6,7 @@
   <link href="/style.css" rel="stylesheet">
 
   <script src="https://kit.fontawesome.com/d032355450.js" crossorigin="anonymous"></script>
-  <title>Equipment Report</title>
+  <title>Material Request</title>
 </head>
 <body class='text-slate-900'><header>
 <nav class="flex justify-between items-center px-[10%] py-4 shadow-xl shadow-slate-300">
@@ -14,78 +14,84 @@
        <ul class="flex gap-6">
               <li><a href="/equipment">Equipment</a></li>
               <li><a href="/report">Report</a></li>
-              <li><a href="#">Request</a></li>
+              <li><a href="/request">Request</a></li>
        </ul>
 </nav>
 
 </header>
 
-<section class="px-[10%]">
-   
+<section class="px-[5%]">
+    <p class=" py-8 font-semibold text-4xl text-center ">EQUIPMENT REPORT MONITORING</p>
 
-<p class=" py-8 font-semibold text-4xl text-center ">EQUIPMENT Maintenance Report</p><div class="relative overflow-x-auto">
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xl text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" class="px-6 py-3">
-                     JOB ORDER #</th>
-                <th scope="col" class="px-6 py-3">
-                    CODE
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    DATE REPORTED
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    PROBLEMS / ISSUE
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    ASSESSMENT
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    PARTS
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    STATUS
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    REPORT                </th>
-             
-                 
-               
-        </thead>
-        <tbody>
-            <tr class="uppercase bg-white border-b dark:bg-zinc-300 dark:border-gray-600  text-gray-900">
-            
-                <td class="px-6 py-4">
-                    EQPT-240801-0001
-                </td>
-                <td class="px-6 py-4">
-                    ML-03
-                </td>
-                <td class="px-6 py-4">
-                    24-08-01
-                </td>
-                <td class="px-6 py-4">
-                    Worn-out fan belt
-                </td>
-                <td class="px-6 py-4">
-                    Need to replace parts.
-                </td>
-                <td class="px-6 py-4">
-                    fan belt
-                </td>
-                <td class="px-6 py-4">
-                    On-going repair
-                </td>
-                <td class="px-6 py-4">
-                   <a href="https://drive.google.com/file/d/1DsKq-x8basnH8ufLzIOxmUKSXDyf7-UC/view?usp=drive_link">View Report</a> 
-                </td>
-              
-             
-            </tr>
-           
-        </tbody>
-    </table>
-</div></section></body>
+    <div>
+        <form action="" class="px-4 py-3 w-[100%] rounded-full flex gap-10 items-center mb-10" >
+            <label for="" class="text-xl text-gray-500 font-semibold">Search </label>
+            <input type="text" placeholder="Type equipment code to view report..." class="pl-6 py-2 w-[100%] rounded-3xl italic border-slate-400">
+        </form>
+    </div><div class="relative overflow-x-auto">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-normal text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                             JOB ORDER NO.</th>
+                        <th scope="col" class="px-6 py-3">
+                            EQPT-CODE </th>
+                        <th scope="col" class="px-6 py-3">
+                            DATE REPORTED
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            PROBLEMS / ISSUE
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            ASSESSMENT
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            PARTS NEEDED
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            STATUS
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            FILES
+                        </th>
+                      
+                     
+                         
+                       
+                </thead>
+                <tbody>
+                    <tr class="uppercase bg-white border-b dark:bg-zinc-200 dark:border-gray-400  text-gray-900">
+                    
+                        <td class="px-6 py-4">
+                            EQPT-240801-0002
+                        </td>
+                        <td class="px-6 py-4">
+                            ML-03
+                        </td>
+                        <td class="px-6 py-4">
+                            24-August-01
+                        </td>
+                        <td class="px-6 py-4">
+                            Burnt Solenoid
+                        </td>
+                        <td class="px-6 py-4">
+                            Need to replace parts.
+                        </td>
+                        <td class="px-6 py-4">
+                            12V Solenoid
+                        </td>
+                        <td class="px-6 py-4">
+                            On-going repair
+                        </td>
+                        <td class="">
+                           <a href="https://drive.google.com/file/d/1DsKq-x8basnH8ufLzIOxmUKSXDyf7-UC/view?usp=drive_link" class="bg-zinc-500 px-6 py-4 rounded-3xl text-white">View Report</a> 
+                        </td>
+                      
+                     
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div></section></body>
 </html>
 
