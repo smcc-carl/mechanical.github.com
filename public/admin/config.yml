@@ -20,4 +20,4 @@ collections:
     - { label: "Team", name: "team", widget: "string" }
     - { label: "Location", name: "location", widget: "string" }
     - { label: "Remarks", name: "reamrks", widget: "string" }
-    - { label: "Tags", name: "tags", widget: "string" }
+    - { label: "Tags", name: "tags", widget: "list" }
