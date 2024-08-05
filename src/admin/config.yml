@@ -2,22 +2,22 @@ backend:
   name: git-gateway
   branch: origin
 
-media_folder:"public/asset"
-public_folder:"/asset"
+media_folder: "public/asset"
+public_folder: "/asset"
 collections:
  -name: "equipment"
   label: "Equipment Master List"
-  foldr: "src/equipment"
+  folder: "src/equipment"
   create: true
   fields:
-    - { label: "Equipment Code", name: "code", widget: "string"}
-    - { label: "Equipment Type", name: "name", equipment: "string"}
-    - { label: "Make;", name: "maker", widget: "string"}
-    - { label: "Model", name: "model", widget: "string"}
-    - { label: "Serial Number", name: "serial", widget: "string"}
-    -{ label: "Weight", name: "weight", widget: "string"}
-    -label: "Capacity", name: "capacity", widget: "string"}
-    - label: "Team", name: "team", widget: "string"
-    - { label: "Location", name: "location", widget: "string"}
-    - { label: "Remarks", name: "reamrks", widget: "select"}
-    - { label: "Tags", name: "tags", widget: "string"}
+    - { label: "Equipment Code", name: "code", widget: "string" }
+    - { label: "Equipment Type", name: "name", equipment: "string" }
+    - { label: "Make;", name: "maker", widget: "string" }
+    - { label: "Model", name: "model", widget: "string" }
+    - { label: "Serial Number", name: "serial", widget: "string" }
+    -{ label: "Weight", name: "weight", widget: "string" }
+    -{ label: "Capacity", name: "capacity", widget: "string" }
+    - { label: "Team", name: "team", widget: "string" }
+    - { label: "Location", name: "location", widget: "string" }
+    - { label: "Remarks", name: "reamrks", widget: "select" }
+    - { label: "Tags", name: "tags", widget: "string" }
