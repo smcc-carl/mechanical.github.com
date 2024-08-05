@@ -1,0 +1,79 @@
+---
+ layout: 'base.njk'
+---
+<div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-normal text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                     EQ Code</th>
+                <th scope="col" class="px-6 py-3">
+                    EQUIPMENT
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    MAKE
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    MODEL
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    SERIAL
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    WEIGHT
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    CAPACITY
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    TEAM/OPERATOR
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    LOCATION STATUS
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    REMARKS
+                </th>    
+               
+        </thead>
+        <tbody>
+      
+            <tr class="uppercase bg-white border-b dark:bg-zinc-300 dark:border-gray-600  text-gray-900">
+                <th scope="row" class="px-6 py-2 font-medium ">
+                   {{ code }}
+                </th>
+                <td class="px-6 py-4">
+                    {{ equipment }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ maker }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ model }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ serial }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ weight }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ capacity }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ team }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ location }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ remarks }}
+                </td>
+             
+            </tr>
+       
+        </tbody>
+    </table>
+</div>
+ 
