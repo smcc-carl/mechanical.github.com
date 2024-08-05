@@ -5,7 +5,7 @@ backend:
 media_folder:"public/asset"
 public_folder:"/asset"
 collections:
- -name: "masterlist"
+ -name: "equipment"
   label: "Equipment Master List"
   foldr: "src/equipment"
   create: true
