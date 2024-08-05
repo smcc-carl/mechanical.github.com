@@ -11,7 +11,7 @@ collections:
    create: true
    fields:
     - { label: "Equipment Code", name: "code", widget: "string" }
-    - { label: "Equipment Type", name: "name", equipment: "string" }
+    - { label: "Equipment Type", name: "equipment", widget: "string" }
     - { label: "Make;", name: "maker", widget: "string" }
     - { label: "Model", name: "model", widget: "string" }
     - { label: "Serial Number", name: "serial", widget: "string" }
@@ -20,4 +20,4 @@ collections:
     - { label: "Team", name: "team", widget: "string" }
     - { label: "Location", name: "location", widget: "string" }
     - { label: "Remarks", name: "remarks", widget: "string" }
-    - { label: "Tags", name: "tags", widget: "string" }
+    - { label: "Tags", name: "tags", widget: "string" default: "list"}
