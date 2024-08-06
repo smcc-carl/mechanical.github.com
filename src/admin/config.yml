@@ -12,7 +12,7 @@ collections:
    fields:
     - { label: "Equipment Code", name: "code", widget: "string" }
     - { label: "Equipment Type", name: "equipment", widget: "string" }
-    - { label: "Make;", name: "maker", widget: "string" }
+    - { label: "Make", name: "maker", widget: "string" }
     - { label: "Model", name: "model", widget: "string" }
     - { label: "Serial Number", name: "serial", widget: "string" }
     - { label: "Weight", name: "weight", widget: "string" }
