@@ -14,16 +14,16 @@ title: SMCC Motorpool
    </div>
 
    <div class="">
-      <a href="{{equipment.data.file}}">
+      <a href="{{report.data.file}}">
       <ul class="grid grid-cols-5">
-         {%- for equipment in collections.report -%}
+         {%- for report in collections.report -%}
          {%- if loop.index0 <5 -%}
          <li>
          <article class="uppercase">
            <img src="./asset/data-storage.png" alt="" class="w-44">
-            <p class="text-2xl font-bold mt-4">{{ equipment.data.code }}</p>
-            <p class="font-bold">{{ equipment.data.parts }}</p>
-            <p class="font-extrabold text-xl text-blue-700">{{ equipment.data.part_status }}</p>
+            <p class="text-2xl font-bold mt-4">{{ report.data.code }}</p>
+            <p class="font-bold">{{ report.data.parts }}</p>
+            <p class="font-extrabold text-xl text-blue-700">{{ report.data.status }}</p>
          </article>
         
          </li>
