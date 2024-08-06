@@ -1,4 +1,4 @@
-mebackend:
+backend:
   name: git-gateway
   branch: origin
 
@@ -12,12 +12,27 @@ collections:
    fields:
     - { label: "Equipment Code", name: "code", widget: "string" }
     - { label: "Equipment Type", name: "equipment", widget: "string" }
-    - { label: "Maker", name: "maker", widget: "string" }
+    - { label: "Make", name: "maker", widget: "string" }
     - { label: "Model", name: "model", widget: "string" }
     - { label: "Serial Number", name: "serial", widget: "string" }
     - { label: "Weight", name: "weight", widget: "string" }
     - { label: "Capacity", name: "capacity", widget: "string" }
     - { label: "Team", name: "team", widget: "string" }
     - { label: "Location", name: "location", widget: "string" }
-    - { label: "Remarks", name: "reamrks", widget: "string" }
-    - { label: "Tags", name: "tags", widget: "list" }
+    - { label: "Remarks", name: "remarks", widget: "string" }
+    - { label: "Tags", name: "tags", widget: "string" }
+ - name: "reports"
+   label: "Equipment Report Monitoring"
+   folder: "src/report"
+   create: true
+   fields:
+    - { label: "Job Order No.", name: "job", widget: "string" }
+    - { label: "Equipment Code", name: "code", widget: "string" }
+    - { label: "Date Reported", name: "date_report", widget: "string" }
+    - { label: "Problems / Issues", name: "problems", widget: "string" }
+    - { label: "Assessment", name: "assessment", widget: "string" }
+    - { label: "Parts Needed", name: "parts", widget: "string" }
+    - { label: "Status", name: "status", widget: "string" }
+    - { label: "Team", name: "team", widget: "string" }
+    - { label: "Files", name: "file", widget: "string" }
+  

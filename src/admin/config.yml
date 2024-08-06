@@ -21,3 +21,18 @@ collections:
     - { label: "Location", name: "location", widget: "string" }
     - { label: "Remarks", name: "remarks", widget: "string" }
     - { label: "Tags", name: "tags", widget: "string" }
+ - name: "reports"
+   label: "Equipment Report Monitoring"
+   folder: "src/report"
+   create: true
+   fields:
+    - { label: "Job Order No.", name: "job", widget: "string" }
+    - { label: "Equipment Code", name: "code", widget: "string" }
+    - { label: "Date Reported", name: "date_report", widget: "string" }
+    - { label: "Problems / Issues", name: "problems", widget: "string" }
+    - { label: "Assessment", name: "assessment", widget: "string" }
+    - { label: "Parts Needed", name: "parts", widget: "string" }
+    - { label: "Status", name: "status", widget: "string" }
+    - { label: "Team", name: "team", widget: "string" }
+    - { label: "Files", name: "file", widget: "string" }
+  
