@@ -14,15 +14,16 @@ title: SMCC Motorpool
    </div>
 
    <div class="">
+         <ul class="grid grid-cols-5">
   {%- for report in collections.report | reverse -%}
          {%- if loop.index0 < 5 -%}
       <a href="{{ report.data.file }}">
-      <ul class="grid grid-cols-5">
+   
        
          <li>
          <article class="uppercase">
            <img src="./asset/data-storage.png" alt="" class="w-44">
-            <p class="text-2xl font-bold mt-4">{{ report.data.code }}</p>
+            <p class="text-xl font-bold mt-4">{{ report.data.code }}</p>
             <p class="font-bold">{{ report.data.parts }}</p>
             <p class="font-semibold text-sm text-blue-700">{{ report.data.status }}</p>
          </article>
