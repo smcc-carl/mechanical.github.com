@@ -1,6 +1,6 @@
 ---
 job: "EQPT-240807-0001 FTK01 "
-code: FTK01
+code: FTK-01
 date_report: 24-AUGUST-07
 problems: DAMAGE CLUTCH MASTER ASSY
 assessment: NEED TO REPLACE PARTS
