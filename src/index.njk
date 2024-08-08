@@ -3,29 +3,32 @@ layout: 'base.njk'
 title: SMCC Motorpool
 ---
 
+<p class="text-center text-5xl font-semibold uppercase mt-20 mb-12">M&E Data Center</p>
 
-<section class="px-[10%]">
+<div class="flex justify-between items-center px-[10%]">
 
-   <p class="text-center text-5xl font-semibold uppercase mt-20">M&E Data Center</p>
+      
+<section>
 
-   <div class="flex justify-between items-center">
-      <p class="py-12 text-2xl text-slate-600 font-semibold">LATEST MATERIAL REQUEST</p>
-       <a href="/report" class="text-xl text-slate-600 ">View All Request</a>
-   </div>
+   
 
    <div class="">
-         <ul class="grid grid-cols-5">
+      <p class="py-12 text-2xl  font-semibold">LATEST EQUIPMENT REPORT</p>
+     
+   </div>
+   
+   <div class="mb-6">
+         <ul class="grid grid-cols-3 gap-10">
   {%- for report in collections.report | reverse -%}
-         {%- if loop.index0 < 5 -%}
+         {%- if loop.index0 < 6 -%}
       <a href="{{ report.data.file }}">
    
        
          <li>
          <article class="uppercase">
-           <img src="./asset/data-storage.png" alt="" class="w-44">
-            <p class="text-xl font-bold mt-4">{{ report.data.code }}</p>
-            <p class="font-bold">{{ report.data.parts }}</p>
-            <p class="font-semibold text-sm text-blue-700">{{ report.data.status }}</p>
+           <img src="./asset/data-storage.png" alt="" class= "w-44">
+            <p class=" text-xl font-bold mt-4">{{ report.data.code }}</p>
+            <p class=" font-bold">{{ report.data.problems }}</p>
          </article>
         
          </li>
@@ -34,6 +37,26 @@ title: SMCC Motorpool
        
       </ul>
       </a>
-   </div>
+   </div> 
+
+      <a href="/report" class=" text-white font-semibold  rounded bg-blue-500 py-3 px-8">View All Request</a>
 
 </section>
+<div>
+   <p class="text-xl font-semibold">Latest Material Request</p>
+   <ul class="inline" id="myUL">
+    
+       {%- for report in collections.report | reverse-%}
+   <li id="myList" class="bg-white items-center text-sm mt-4">
+           <p class="font-semibold">{{ report.data.parts }}</p>
+      <p class="">{{ report.data.date_report }}</p>
+          <p class="text-red-500 font-semibold">{{ report.data.status }}</p>
+   </li>
+   {%- endfor -%}   
+  </ul>
+ </div>
+       
+
+
+</div>
+<p class="italic text-blue-900 font-semibold text-sm text-center mt-20">(Note:Every record within this website was only started last August 1, 2024)</p>
