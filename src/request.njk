@@ -1,91 +1,40 @@
 ---
- layout: 'base.njk'
- title: Material Request
+    layout: 'base.njk'
+    title: MR Monitoring
 ---
 
-<section class="px-[5%]">
 
-    <p class=" py-8 font-semibold text-4xl text-center ">MATERIAL REQUEST MONITORING</p>
+<p class="text-center text-5xl font-semibold uppercase mt-20 mb-16">MATERIAL REQUEST MONITORING</p>
 
-    
-    <div class="relative overflow-x-auto">
-        <table class="w-full text-sm text-center rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead class="text-normal text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                    <th scope="col" class="px-6 py-3">
-                         PROJECT CODE</th>
-                    <th scope="col" class="px-6 py-3">
-                        DATE REPORTED</th>
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        JOB ORDER#</th>
-                    </th>
-                    
-                    <th scope="col" class="px-6 py-3">
-                        EQUIPMENT</th>
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        DESCRIPTION OF MATERIAL
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        UNIT
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        QTY
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        DATE NEEDED
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        STATUS
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        FILES
-                    </th>
-                   
-                   
-            </thead>
-            <tbody>
-{%- for equipment in collections.report -%}
-                <tr class="uppercase bg-white border-b dark:bg-zinc-300 dark:border-gray-600  text-gray-900">
+<section class="bg-gray-200">
+ <div class="px-[5%]">
 
-                    <th scope="row" class="px-6 py-2 font-medium ">
-                       {{ equipment.data.project_code }}
-                    </th>
-                    <td class="px-6 py-4">
-                        {{equipment.data.date_report}}
-                    </td>
-                    <td class="px-6 py-4">
-                        {{equipment.data.job}}
-                    </td>
-                    <td class="px-6 py-4">
-                        {{ equipment.data.code }}
-                    </td>
-                  
-                    <td class="px-6 py-4">
-                        {{ equipment.data.parts }}
-                    </td>
-                    <td class="px-6 py-4">
-                        {{ equipment.data.unit }}
-                    </td>
-                    <td class="px-6 py-4">
-                        {{ equipment.data.qty }}
-                    </td>
-                    <td class="px-6 py-4">
-                        {{ equipment.data.date_needed }}
-                    </td>
-                    <td class="px-6 py-4">
-                        {{ equipment.data.part_status }}
-                    </td>
-                    <td class="px-6 py-4">
-                        <a href="{{ equipment.data.file }}" class="text-black font-bold underline">View Report</a> 
-                    </td>
-                {%- endfor -%}  
-                </tr>
-               
-            </tbody>
-        </table>
-    </div>
-     
   
+   <header class="border-1 w-full bg-gray-500 grid grid-cols-7 text-center gap-10 py-4 px-4">
+      
+       <p class="text-normal font-semibold text-gray-400 ">REQUESTED PARTS</p>
+       <p class="text-normal font-semibold text-gray-400 ">DATE REQUESTED</p>
+       <p class="text-normal font-semibold text-gray-400 ">EQPT USE</p>
+       <p class="text-normal font-semibold text-gray-400 ">UNIT</p>
+       <p class="text-normal font-semibold text-gray-400 ">QTY</p>
+       <p class="text-normal font-semibold text-gray-400 ">JUSTIFICATION</p>
+       <p class="text-normal font-semibold text-gray-400 ">STATUS</p>
+
+      
+   </header>
+   <ul class=" w-full" id="myUL">
+       {%- for report in collections.report | reverse-%}
+   <li id="myList" class="bg-gray-200 grid grid-cols-7 text-center border-1 border-slate-500 items-center text-normal">
+           <p class="py-2 px-2">{{ report.data.parts }}</p>
+      <p class="py-2 px-2">{{ report.data.date_report }}</p>
+       <p class="py-2 px-2">{{ report.data.code }}</p>
+       <p class="py-2 px-2">{{ report.data.unit }}</p>
+       <p class="py-2 px-2">{{ report.data.qty }}</p>
+       <p class="py-2 px-2">USE TO REPAIR {{ report.data.code }}</p>
+       <p class="py-2 px-2">{{ report.data.status }}</p>
+   </li>
+   {%- endfor -%}   
+  </ul>
+  </div>
+       
 </section>
