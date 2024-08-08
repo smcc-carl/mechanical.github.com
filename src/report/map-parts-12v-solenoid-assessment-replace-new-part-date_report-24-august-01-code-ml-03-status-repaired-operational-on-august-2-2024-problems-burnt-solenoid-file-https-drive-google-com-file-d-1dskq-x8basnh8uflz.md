@@ -5,7 +5,7 @@ date_report: 24-AUGUST-01
 problems: BURNT SOLENOID
 assessment: REPLACE NEW PART
 parts: 12V SOLENOID
-status: OPERATIONAL(240802)
+status: DONE (240802)
 team: BUILDING
 unit: PCS
 qty: "2"
