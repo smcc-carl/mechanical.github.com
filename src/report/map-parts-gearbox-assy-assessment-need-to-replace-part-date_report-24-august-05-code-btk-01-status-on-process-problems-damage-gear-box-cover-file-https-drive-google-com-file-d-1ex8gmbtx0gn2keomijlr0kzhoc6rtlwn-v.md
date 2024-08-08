@@ -7,5 +7,7 @@ assessment: NEED TO REPLACE PART
 parts: GEARBOX ASSY
 status: ON-PROCESS
 team: CALUMPIT
+unit: ASSY
+qty: "1"
 file: https://drive.google.com/file/d/1Ex8gmbtx0Gn2KEomIjLR0kZhOc6rTLwn/view?usp=sharing
 ---
