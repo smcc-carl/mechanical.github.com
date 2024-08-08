@@ -1,13 +1,13 @@
 ---
-code: GEN-07
+code: GEN-08
 equipment: GENERATOR
 maker: DENYO
 model: DCA-220ESK
-serial: "3940489"
+serial: "3990488"
 weight: 3770 KG
 capacity: 220 KVA
 team: Electrical Team
-location: PR7-61 Drainage
+location: PR7-60
 remarks: OPERATIONAL
 tags: list
 ---
