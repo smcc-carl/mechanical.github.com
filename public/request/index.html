@@ -6,7 +6,7 @@
   <link href="/style.css" rel="stylesheet">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-   <title>Material Request</title>
+   <title>MR Monitoring</title>
 </head>
 <body class='text-slate-900'><header>
 <nav class="flex justify-between items-center px-[10%] py-4 shadow-xl shadow-slate-300">
@@ -20,119 +20,60 @@
 
 </header>
 
-<section class="px-[5%]">
 
-    <p class=" py-8 font-semibold text-4xl text-center ">MATERIAL REQUEST MONITORING</p>
+<p class="text-center text-5xl font-semibold uppercase mt-20 mb-16">MATERIAL REQUEST MONITORING</p>
 
-    
-    <div class="relative overflow-x-auto">
-        <table class="w-full text-sm text-center rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead class="text-normal text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                    <th scope="col" class="px-6 py-3">
-                         PROJECT CODE</th>
-                    <th scope="col" class="px-6 py-3">
-                        DATE REPORTED</th>
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        JOB ORDER#</th>
-                    </th>
-                    
-                    <th scope="col" class="px-6 py-3">
-                        EQUIPMENT</th>
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        DESCRIPTION OF MATERIAL
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        UNIT
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        QTY
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        DATE NEEDED
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        STATUS
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        FILES
-                    </th>
-                   
-                   
-            </thead>
-            <tbody><tr class="uppercase bg-white border-b dark:bg-zinc-300 dark:border-gray-600  text-gray-900">
+<section class="bg-gray-200">
+ <div class="px-[5%]">
 
-                    <th scope="row" class="px-6 py-2 font-medium ">
-                       
-                    </th>
-                    <td class="px-6 py-4">
-                        24-AUGUST-01
-                    </td>
-                    <td class="px-6 py-4">
-                        EQPT-240801-0001 ML-03
-                    </td>
-                    <td class="px-6 py-4">
-                        ML-03
-                    </td>
-                  
-                    <td class="px-6 py-4">
-                        12V SOLENOID
-                    </td>
-                    <td class="px-6 py-4">
-                        
-                    </td>
-                    <td class="px-6 py-4">
-                        
-                    </td>
-                    <td class="px-6 py-4">
-                        
-                    </td>
-                    <td class="px-6 py-4">
-                        
-                    </td>
-                    <td class="px-6 py-4">
-                        <a href="https://drive.google.com/file/d/1DsKq-x8basnH8ufLzIOxmUKSXDyf7-UC/view?usp=sharing" class="text-black font-bold underline">View Report</a> 
-                    </td><tr class="uppercase bg-white border-b dark:bg-zinc-300 dark:border-gray-600  text-gray-900">
-
-                    <th scope="row" class="px-6 py-2 font-medium ">
-                       
-                    </th>
-                    <td class="px-6 py-4">
-                        24-AUGUST-06
-                    </td>
-                    <td class="px-6 py-4">
-                        EQPT-240806-0001 ELF01
-                    </td>
-                    <td class="px-6 py-4">
-                        ELF-01
-                    </td>
-                  
-                    <td class="px-6 py-4">
-                        CLUTCH FAN, SILICON OIL
-                    </td>
-                    <td class="px-6 py-4">
-                        
-                    </td>
-                    <td class="px-6 py-4">
-                        
-                    </td>
-                    <td class="px-6 py-4">
-                        
-                    </td>
-                    <td class="px-6 py-4">
-                        
-                    </td>
-                    <td class="px-6 py-4">
-                        <a href="https://drive.google.com/file/d/1Eglgz6lii0Bo2TSYfnwu_Z6Sea24dwcW/view?usp=sharing" class="text-black font-bold underline">View Report</a> 
-                    </td></tr>
-               
-            </tbody>
-        </table>
-    </div>
-     
   
+   <header class="border-1 w-full bg-gray-500 grid grid-cols-7 text-center gap-10 py-4 px-4">
+      
+       <p class="text-normal font-semibold text-gray-400 ">REQUESTED PARTS</p>
+       <p class="text-normal font-semibold text-gray-400 ">DATE REQUESTED</p>
+       <p class="text-normal font-semibold text-gray-400 ">EQPT USE</p>
+       <p class="text-normal font-semibold text-gray-400 ">UNIT</p>
+       <p class="text-normal font-semibold text-gray-400 ">QTY</p>
+       <p class="text-normal font-semibold text-gray-400 ">JUSTIFICATION</p>
+       <p class="text-normal font-semibold text-gray-400 ">STATUS</p>
+
+      
+   </header>
+   <ul class=" w-full" id="myUL"><li id="myList" class="bg-gray-200 grid grid-cols-7 text-center border-1 border-slate-500 items-center text-normal">
+           <p class="py-2 px-2">GEARBOX ASSY</p>
+      <p class="py-2 px-2">24-AUGUST-05</p>
+       <p class="py-2 px-2">BTK-01</p>
+       <p class="py-2 px-2">ASSY</p>
+       <p class="py-2 px-2">1</p>
+       <p class="py-2 px-2">USE TO REPAIR BTK-01</p>
+       <p class="py-2 px-2">ON-PROCESS</p>
+   </li><li id="myList" class="bg-gray-200 grid grid-cols-7 text-center border-1 border-slate-500 items-center text-normal">
+           <p class="py-2 px-2">CLUTCH MASTER ASSEMBLY</p>
+      <p class="py-2 px-2">24-AUGUST-07</p>
+       <p class="py-2 px-2">FTK-01</p>
+       <p class="py-2 px-2">ASSY</p>
+       <p class="py-2 px-2">1</p>
+       <p class="py-2 px-2">USE TO REPAIR FTK-01</p>
+       <p class="py-2 px-2">ON-PROCESS</p>
+   </li><li id="myList" class="bg-gray-200 grid grid-cols-7 text-center border-1 border-slate-500 items-center text-normal">
+           <p class="py-2 px-2">CLUTCH FAN, SILICON OIL</p>
+      <p class="py-2 px-2">24-AUGUST-06</p>
+       <p class="py-2 px-2">ELF-01</p>
+       <p class="py-2 px-2">PC</p>
+       <p class="py-2 px-2">1</p>
+       <p class="py-2 px-2">USE TO REPAIR ELF-01</p>
+       <p class="py-2 px-2">ON-PROCESS</p>
+   </li><li id="myList" class="bg-gray-200 grid grid-cols-7 text-center border-1 border-slate-500 items-center text-normal">
+           <p class="py-2 px-2">12V SOLENOID</p>
+      <p class="py-2 px-2">24-AUGUST-01</p>
+       <p class="py-2 px-2">SML-03</p>
+       <p class="py-2 px-2">PCS</p>
+       <p class="py-2 px-2">2</p>
+       <p class="py-2 px-2">USE TO REPAIR SML-03</p>
+       <p class="py-2 px-2">DONE (240802)</p>
+   </li></ul>
+  </div>
+       
 </section>
 <script>
       if (window.netlifyIdentity) {

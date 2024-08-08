@@ -34,5 +34,8 @@ collections:
     - { label: "Parts Needed", name: "parts", widget: "string" }
     - { label: "Status", name: "status", widget: "string" }
     - { label: "Team", name: "team", widget: "string" }
+    - { label: "Unit", name: "unit", widget: "string" }
+    - { label: "Qty", name: "qty", widget: "string" }
     - { label: "Files", name: "file", widget: "string" }
+    
   
