@@ -7,5 +7,7 @@ assessment: REPLACE NEW PART
 parts: CLUTCH FAN, SILICON OIL
 status: ON-PROCESS
 team: CALUMPIT
+unit: PC
+qty: "1"
 file: https://drive.google.com/file/d/1Eglgz6lii0Bo2TSYfnwu_Z6Sea24dwcW/view?usp=sharing
 ---
