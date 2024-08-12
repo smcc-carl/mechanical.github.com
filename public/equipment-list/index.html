@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/style.css" rel="stylesheet">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+   <title>Equipment Data List</title>
+</head>
+<body class='text-slate-900'><header>
+<nav class="flex justify-between items-center px-[10%] py-4 shadow-xl shadow-slate-300">
+     <a href="/">  <p class="text-2xl font-semibold">M&E Warehouse</p> </a>
+       <ul class="flex gap-6">
+              <li><a href="/">Home</a></li>
+              <li><a href="/equipment">Equipment</a></li>
+              <li><a href="/report">Report</a></li>
+              <li><a href="/request">Request</a></li>
+       </ul>
+</nav>
+
+
+
+</header>
+
+<section class="px-[5%] ">
+    <p class="text-5xl text-center uppercase font-bold mt-20">Equipment Data List</p>
+    <div class="flex gap-10 mt-10">
+    <div class="bg-black w-[70%]">
+        <img src="https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+    </div>
+ <div>
+        <p class="text-3xl font-bold upperacse">Equipment Details</p>
+        <div class=" flex gap-5  w-[30%]">
+        <div class="text-right py-4">
+           
+            <p class="py-2 px-2 ">EQUIPMENT:</p>
+            <p class="py-2 px-2 ">EQPT. CODE:</p>
+            <p class="py-2 px-2 ">MAKER:</p>
+            <p class="py-2 px-2 ">SERIAL NO.:</p>
+            <p class="py-2 px-2 ">WEIGHT:</p>
+            <p class="py-2 px-2 ">CAPACITY:</p>
+            <p class="py-2 px-2 ">LOCATION:</p>
+            <p class="py-2 px-2 ">STATUS:</p>
+           
+        </div>
+      
+        <div class=" py-4 font-bold text-left w-full">
+            <p class="py-2 px-2 ">GEN01</p>
+            <p class="py-2 px-2 ">GENERATOR</p>
+            <p class="py-2 px-2 ">DENYO</p>
+            <p class="py-2 px-2 ">70005624</p>
+            <p class="py-2 px-2 ">1120kg</p>
+            <p class="py-2 px-2 ">60 KVA</p>
+            <p class="py-2 px-2 ">MOS</p>
+            <p class="py-2 px-2 ">OPERATIONAL</p>
+        </div>
+    </div>
+    </div>
+</div>
+</section>
+<article>
+    
+    <p class="text-center text-5xl font-semibold uppercase mt-20 mb-12">EQUIPMENT REPORT </p>
+    <div class="mx-[10%]">
+          <table class="w-full text-sm text-left rtl:text-right text-gray-200 dark:text-gray-400">
+                <thead class="text-normal text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr class="text-center">
+                        <th scope="col" class="py-3">
+                             Date</th>
+                        <th scope="col" class=" py-3">
+                            Issues/Problems
+                        </th>
+                        <th scope="col" class=" py-3">
+                            Assessment
+                        </th>
+                        <th scope="col" class=" py-3">
+                            Ordered Parts
+                        </th>
+                        <th scope="col" class=" py-3">
+                            REPORT
+                        </th>
+                       
+                       
+                </thead>
+               <tbody>
+                <tr>
+                    <td class=" py-3 text-center">24-08-2024</td>
+                    <td class=" py-3 text-center">24-08-2024</td>
+                    <td class=" py-3 text-center">24-08-2024</td>
+                    <td class=" py-3 text-center"></td>
+                    <td class=" py-3 text-center">24-08-2024</td>
+                </tr>
+               </tbody> 
+    </div>
+</article><script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>
+

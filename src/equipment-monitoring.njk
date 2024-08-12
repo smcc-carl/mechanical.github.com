@@ -1,0 +1,71 @@
+---
+ layout: 'base.njk'
+ title: Material Request
+---
+
+<section class="px-[5%]">
+    <p class=" py-8 font-semibold text-4xl text-center ">EQUIPMENT REPORT MONITORING</p>
+
+    <div>
+        <form action="" class="px-4 py-3 w-[100%] rounded-full flex gap-10 items-center mb-10" >
+            <label for="" class="text-xl text-gray-500 font-semibold">Search</label>
+            <input type="text" id="myInput" onkeyup="myFunction()" title="Type equipment" placeholder="Type equipment code to view report..." class="pl-6 py-2 w-[100%] rounded-3xl italic border-slate-400">
+        </form>
+    </div>
+
+   
+    <header class="border-1 w-full bg-slate-800 grid grid-cols-8 text-center gap-10 py-4 px-4">
+        <p class="text-normal font-semibold text-gray-400 ">JOB ORDER NO.</p>
+        <p class="text-normal font-semibold text-gray-400 ">EQPT CODE</p>
+        <p class="text-normal font-semibold text-gray-400 ">DATE REPORTED</p>
+        <p class="text-normal font-semibold text-gray-400 ">PROBLEM / ISSUES</p>
+        <p class="text-normal font-semibold text-gray-400 ">ASSESSMENT</p>
+        <p class="text-normal font-semibold text-gray-400 ">PARTS NEEDED</p>
+        <p class="text-normal font-semibold text-gray-400 ">STATUS</p>
+        <p class="text-normal font-semibold text-gray-400 ">REPORT</p>
+       
+    </header>
+    <ul class=" w-full" id="myUL">
+        {%- for report in collections.report | reverse-%}
+    <li class="bg-zinc-300 grid grid-cols-8 text-center border-b-2 border-gray-200 items-center text-normal">
+        <p class="py-2 px-2">{{ report.data.job }}</p>
+        <p class="py-2 px-2">{{ report.data.code }}</p>
+        <p class="py-2 px-2">{{ report.data.date_report }}</p>
+        <p class="py-2 px-2">{{ report.data.problems }}</p>
+        <p class="py-2 px-2">{{ report.data.assessment }}</p>
+        <p class="py-2 px-2">{{ report.data.parts }}</p>
+        <p class="py-2 px-2">{{ report.data.status }}</p>
+        <a href="{{ report.data.file }}" class="py-2 px-2 underline pointer">View Report</a>
+    </li>
+    {%- endfor -%}   
+   </ul>
+        
+        
+</section>
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, p, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+
+    for (i = 0; i < li.length; i++) {
+        p = li[i].getElementsByTagName("p")[0];
+        txtValue = p.textContent || p.innerText;
+
+        if (txtValue.toUpperCase().indexOf(filter) > -1 ){
+            li[i].style.display = "";
+        }else{
+            li[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+
+
+

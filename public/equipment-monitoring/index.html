@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/style.css" rel="stylesheet">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+   <title>Material Request</title>
+</head>
+<body class='text-slate-900'><header>
+<nav class="flex justify-between items-center px-[10%] py-4 shadow-xl shadow-slate-300">
+     <a href="/">  <p class="text-2xl font-semibold">M&E Warehouse</p> </a>
+       <ul class="flex gap-6">
+              <li><a href="/">Home</a></li>
+              <li><a href="/equipment">Equipment</a></li>
+              <li><a href="/report">Report</a></li>
+              <li><a href="/request">Request</a></li>
+       </ul>
+</nav>
+
+
+
+</header>
+
+<section class="px-[5%]">
+    <p class=" py-8 font-semibold text-4xl text-center ">EQUIPMENT REPORT MONITORING</p>
+
+    <div>
+        <form action="" class="px-4 py-3 w-[100%] rounded-full flex gap-10 items-center mb-10" >
+            <label for="" class="text-xl text-gray-500 font-semibold">Search</label>
+            <input type="text" id="myInput" onkeyup="myFunction()" title="Type equipment" placeholder="Type equipment code to view report..." class="pl-6 py-2 w-[100%] rounded-3xl italic border-slate-400">
+        </form>
+    </div>
+
+   
+    <header class="border-1 w-full bg-slate-800 grid grid-cols-8 text-center gap-10 py-4 px-4">
+        <p class="text-normal font-semibold text-gray-400 ">JOB ORDER NO.</p>
+        <p class="text-normal font-semibold text-gray-400 ">EQPT CODE</p>
+        <p class="text-normal font-semibold text-gray-400 ">DATE REPORTED</p>
+        <p class="text-normal font-semibold text-gray-400 ">PROBLEM / ISSUES</p>
+        <p class="text-normal font-semibold text-gray-400 ">ASSESSMENT</p>
+        <p class="text-normal font-semibold text-gray-400 ">PARTS NEEDED</p>
+        <p class="text-normal font-semibold text-gray-400 ">STATUS</p>
+        <p class="text-normal font-semibold text-gray-400 ">REPORT</p>
+       
+    </header>
+    <ul class=" w-full" id="myUL"><li class="bg-zinc-300 grid grid-cols-8 text-center border-b-2 border-gray-200 items-center text-normal">
+        <p class="py-2 px-2">EQPT-240805-0001 BTK01</p>
+        <p class="py-2 px-2">BTK-01</p>
+        <p class="py-2 px-2">24-AUGUST-05</p>
+        <p class="py-2 px-2">DAMAGE GEAR BOX COVER</p>
+        <p class="py-2 px-2">NEED TO REPLACE PART</p>
+        <p class="py-2 px-2">GEARBOX ASSY</p>
+        <p class="py-2 px-2">ON-PROCESS</p>
+        <a href="https://drive.google.com/file/d/1Ex8gmbtx0Gn2KEomIjLR0kZhOc6rTLwn/view?usp=sharing" class="py-2 px-2 underline pointer">View Report</a>
+    </li><li class="bg-zinc-300 grid grid-cols-8 text-center border-b-2 border-gray-200 items-center text-normal">
+        <p class="py-2 px-2">EQPT-240807-0001 FTK01 </p>
+        <p class="py-2 px-2">FTK-01</p>
+        <p class="py-2 px-2">24-AUGUST-07</p>
+        <p class="py-2 px-2">DAMAGE CLUTCH MASTER ASSY</p>
+        <p class="py-2 px-2">NEED TO REPLACE PARTS</p>
+        <p class="py-2 px-2">CLUTCH MASTER ASSEMBLY</p>
+        <p class="py-2 px-2">ON-PROCESS</p>
+        <a href="https://drive.google.com/file/d/1EpKE87CA5dLVHpeM4xM4HY_jPUaO-SA4/view?usp=sharing" class="py-2 px-2 underline pointer">View Report</a>
+    </li><li class="bg-zinc-300 grid grid-cols-8 text-center border-b-2 border-gray-200 items-center text-normal">
+        <p class="py-2 px-2">EQPT-240806-0001 ELF01</p>
+        <p class="py-2 px-2">ELF-01</p>
+        <p class="py-2 px-2">24-AUGUST-06</p>
+        <p class="py-2 px-2">WORN OUT CLUTCH FAN</p>
+        <p class="py-2 px-2">REPLACE NEW PART</p>
+        <p class="py-2 px-2">CLUTCH FAN, SILICON OIL</p>
+        <p class="py-2 px-2">ON-PROCESS</p>
+        <a href="https://drive.google.com/file/d/1Eglgz6lii0Bo2TSYfnwu_Z6Sea24dwcW/view?usp=sharing" class="py-2 px-2 underline pointer">View Report</a>
+    </li><li class="bg-zinc-300 grid grid-cols-8 text-center border-b-2 border-gray-200 items-center text-normal">
+        <p class="py-2 px-2">EQPT-240801-0001 SML03</p>
+        <p class="py-2 px-2">SML-03</p>
+        <p class="py-2 px-2">24-AUGUST-01</p>
+        <p class="py-2 px-2">BURNT SOLENOID</p>
+        <p class="py-2 px-2">REPLACE NEW PART</p>
+        <p class="py-2 px-2">12V SOLENOID</p>
+        <p class="py-2 px-2">DONE (240802)</p>
+        <a href="https://drive.google.com/file/d/1DsKq-x8basnH8ufLzIOxmUKSXDyf7-UC/view?usp=sharing" class="py-2 px-2 underline pointer">View Report</a>
+    </li></ul>
+        
+        
+</section>
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, p, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+
+    for (i = 0; i < li.length; i++) {
+        p = li[i].getElementsByTagName("p")[0];
+        txtValue = p.textContent || p.innerText;
+
+        if (txtValue.toUpperCase().indexOf(filter) > -1 ){
+            li[i].style.display = "";
+        }else{
+            li[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+
+
+
+<script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>
+
