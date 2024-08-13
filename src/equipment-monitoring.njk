@@ -26,10 +26,10 @@
        
     </header>
     <ul class=" w-full" id="myUL">
-        {%- for report in collections.report | reverse-%}
-    <li class="bg-zinc-300 grid grid-cols-8 text-center border-b-2 border-gray-200 items-center text-normal">
+        {%- for report in collections.report | sort(attribute="data.date_report") | reverse -%}
+    <li class="bg-gray-300 grid grid-cols-8 text-center border-b-2 border-gray-200 items-center text-normal">
         <p class="py-2 px-2">{{ report.data.job }}</p>
-        <p class="py-2 px-2">{{ report.data.code }}</p>
+        <p class="py-2 px-2 w-12">{{ report.data.code }}</p>
         <p class="py-2 px-2">{{ report.data.date_report }}</p>
         <p class="py-2 px-2">{{ report.data.problems }}</p>
         <p class="py-2 px-2">{{ report.data.assessment }}</p>

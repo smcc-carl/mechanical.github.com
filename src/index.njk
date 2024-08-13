@@ -42,12 +42,12 @@ title: SMCC Motorpool
       <a href="/report" class=" text-white font-semibold  rounded bg-blue-500 py-3 px-8">View All Request</a>
 
 </section>
-<div class="bg-zinc-200 ml-[5%] px-4 py-4 w-[30%]">
+<div class=" ml-[5%] px-4 py-4 w-[30%]">
    <p class="text-xl font-semibold">Latest Material Request</p>
    <ul id="myUL">
     
        {%- for report in collections.report | reverse-%}
-   <li id="myList" class="items-center text-sm mt-4">
+   <li id="myList" class="items-center text-sm mt-4 bg-gray-300 gap-4 px-6 py-4 rounded-3xl">
            <p class="font-semibold">{{ report.data.parts }}</p>
       <p class="">{{ report.data.date_report }}</p>
           <p class="text-red-500 font-semibold">{{ report.data.status }}</p>
