@@ -1,13 +1,13 @@
 ---
-code: GEN-12
-equipment: GENERATOR
+code: GEN-13
+equipment: DENYO Generator
 maker: DENYO
 model: DCA-300SPK3
-serial: "3936187"
+serial: "3936188"
 weight: " 4160 KG "
 capacity: 300 kva
-team: Electrical Team
-location: Line-1 90TGantry Crane use
+team: ELECTRICAL TEAM
+location: Line-2 90TGantry Crane use
 remarks: OPERATIONAL
 tags: list
 ---
