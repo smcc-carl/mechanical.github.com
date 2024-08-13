@@ -5,7 +5,7 @@ date_report: 24-AUGUST-07
 problems: DAMAGE CLUTCH MASTER ASSY
 assessment: NEED TO REPLACE PARTS
 parts: CLUTCH MASTER ASSEMBLY
-status: ON-PROCESS
+status: DONE
 team: CALUMPIT
 unit: ASSY
 qty: "1"
