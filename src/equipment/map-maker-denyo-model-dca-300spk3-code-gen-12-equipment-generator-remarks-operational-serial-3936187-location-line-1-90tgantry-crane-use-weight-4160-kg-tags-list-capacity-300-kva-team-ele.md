@@ -1,5 +1,5 @@
 ---
-code: GEN-13
+code: GEN-12
 equipment: DENYO Generator
 maker: DENYO
 model: DCA-300SPK3
