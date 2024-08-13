@@ -46,7 +46,7 @@
         <tbody>
 {%- for equipment in collections.list | sort(attribute="data.code", case_sensitive=true) -%}
 
-            <tr class="uppercase bg-white border-b dark:bg-zinc-300 dark:border-gray-600  text-gray-900">
+            <tr class="uppercase border-b bg-gray-200 dark:border-gray-600  text-gray-900">
                 <th scope="row" class="px-6 py-2 font-medium ">
                    {{ equipment.data.code }}
                 </th>
@@ -74,7 +74,7 @@
                 <td class="px-6 py-4">
                     {{ equipment.data.location }}
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 text-red-800 font-bold">
                     {{ equipment.data.remarks }}
                 </td>
              
