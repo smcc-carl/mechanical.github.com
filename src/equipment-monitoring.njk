@@ -11,10 +11,7 @@
             <label for="" class="text-xl text-gray-500 font-semibold">Search</label>
             <input type="text" id="myInput" onkeyup="myFunction()" title="Type equipment" placeholder="Type equipment code to view report..." class="pl-6 py-2 w-[100%] rounded-3xl italic border-slate-400">
         </form>
-      
-<button id="openPopup" class="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none">
-    Generate Report
-</button>
+
     </div>
 
     <!-- popup form -->
@@ -52,48 +49,6 @@
 </section>
 
 
-<!-- Popup Form -->
-<div id="popupForm" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-    <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full relative">
-        <button id="closePopup" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-2xl">
-            &times;
-        </button>
-        <h2 class="text-2xl font-bold mb-6 text-center">Equipment Report Form</h2>
-        <form id="equipmentReportForm">
-            <div class="mb-4">
-                <label for="joNo" class="block text-gray-700">JO NO.</label>
-                <input type="text" id="joNo" name="joNo" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" required>
-            </div>
-            <div class="mb-4">
-                <label for="eqptCode" class="block text-gray-700">EQPT. CODE</label>
-                <input type="text" id="eqptCode" name="eqptCode" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" required>
-            </div>
-            <div class="mb-4">
-                <label for="dateReported" class="block text-gray-700">DATE REPORTED</label>
-                <input type="date" id="dateReported" name="dateReported" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" required>
-            </div>
-            <div class="mb-4">
-                <label for="problems" class="block text-gray-700">PROBLEMS</label>
-                <textarea id="problems" name="problems" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
-            </div>
-            <div class="mb-4">
-                <label for="assessment" class="block text-gray-700">ASSESSMENT</label>
-                <textarea id="assessment" name="assessment" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
-            </div>
-            <div class="mb-4">
-                <label for="partsNeeded" class="block text-gray-700">PARTS NEEDED</label>
-                <textarea id="partsNeeded" name="partsNeeded" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
-            </div>
-            <div class="mb-4">
-                <label for="report" class="block text-gray-700">REPORT</label>
-                <textarea id="report" name="report" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
-            </div>
-            <button type="submit" class="w-full px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none">
-                Submit Report
-            </button>
-        </form>
-    </div>
-</div>
 
 
 
@@ -119,64 +74,6 @@ function myFunction() {
     }
 }
 
-
-// Popup Js
-
-const openPopup = document.getElementById('openPopup');
-        const closePopup = document.getElementById('closePopup');
-        const popupForm = document.getElementById('popupForm');
-        const form = document.getElementById('equipmentReportForm');
-
-        openPopup.addEventListener('click', () => {
-            popupForm.classList.remove('hidden');
-        });
-
-        closePopup.addEventListener('click', () => {
-            popupForm.classList.add('hidden');
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === popupForm) {
-                popupForm.classList.add('hidden');
-            }
-        });
-
-        form.addEventListener('submit', function(e) {
-    e.preventDefault();  // Prevent the default form submission
-
-    // Create a form data object
-    const formData = new FormData(form);
-
-    // Convert form data to a plain object
-    const formObject = {};
-    formData.forEach((value, key) => {
-        formObject[key] = value;
-    });
-
-    // Submit the form data via fetch API
-    fetch('YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL', {
-        method: 'POST',
-        body: JSON.stringify(formObject),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        alert('Report Submitted Successfully');
-        popupForm.classList.add('hidden');
-        form.reset();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error submitting your report. Please try again.');
-    });
-});
 
 </script>
 
