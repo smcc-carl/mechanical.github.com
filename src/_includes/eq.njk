@@ -1,80 +1,64 @@
 ---
- layout: 'base.njk'
- title: {{ 'code' }}
+layout: base.njk
+title: 
 ---
-<div class="relative overflow-x-auto">
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-normal text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+<section class="container grid grid-cols-2 py-16 gap-16 ">
+    <img src="{{image}}" alt="">
+    <div class="grid grid-cols-2 text-xl font-medium">
+        <p>Code:</p>
+        <p>{{code}}</p>
+        <p>Equipment Type:</p>
+        <p>{{equipment}}</p>
+        <p>Maker:</p>
+        <p>{{maker}}</p>
 
-            <tr>
-                <th scope="col" class="px-6 py-3">
-                     EQ Code</th>
-                <th scope="col" class="px-6 py-3">
-                    EQUIPMENT
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    MAKE
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    MODEL
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    SERIAL
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    WEIGHT
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    CAPACITY
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    TEAM/OPERATOR
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    LOCATION STATUS
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    REMARKS
-                </th>    
-               
-        </thead>
-        <tbody>
-      
-            <tr class="uppercase bg-white border-b dark:bg-zinc-300 dark:border-gray-600  text-gray-900">
-                <th scope="row" class="px-6 py-2 font-medium ">
-                   {{ code }}
-                </th>
-                <td class="px-6 py-4">
-                    {{ equipment }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ maker }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ model }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ serial }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ weight }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ capacity }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ team }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ location }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ remarks }}
-                </td>
-             
-            </tr>
+        <p>Serial No:</p>
+        <p>{{serial}}</p>
+        <p>Capacity:</p>
+        <p>{{capacity}}</p>
+        <p>Operator:</p>
+        <p>{{team}}</p>
+        <p>Location:</p>
+        <p>{{location}}</p>
+        <p>Status:</p>
+        <p>{{remarks}}</p>
+    </div>
+</section>
+
+<section>
+    <header class="border-1 w-full bg-slate-800 grid grid-cols-8 text-center gap-10 py-4 px-4 ">
+        <p class="text-normal font-semibold text-gray-400 ">JOB ORDER NO.</p>
+        <p class="text-normal font-semibold text-gray-400 ">EQPT CODE</p>
+        <p class="text-normal font-semibold text-gray-400 ">DATE REPORTED</p>
+        <p class="text-normal font-semibold text-gray-400 ">PROBLEM / ISSUES</p>
+        <p class="text-normal font-semibold text-gray-400 ">ASSESSMENT</p>
+        <p class="text-normal font-semibold text-gray-400 ">PARTS NEEDED</p>
+        <p class="text-normal font-semibold text-gray-400 ">STATUS</p>
+        <p class="text-normal font-semibold text-gray-400 ">REPORT</p>
        
-        </tbody>
-    </table>
-</div>
- 
+    </header>
+    <ul class=" w-full" id="myUL">
+        {% set reportData = collections.report | filter((item) => item.code == page.code) %}
+        {% for report in reportData %}
+
+        {%- for report in collections.report | sort(attribute="data.date_report") | reverse -%}
+            {%- if report.data.code == equipmentCode -%}
+            <li class="bg-gray-300 grid grid-cols-8 text-center items-center text-normal">
+                <p class="py-2 px-2">{{ report.data.job }}</p>
+                <p class="py-2 px-2">{{ report.data.code }}</p>
+                <p class="py-2 px-2">{{ report.data.date_report }}</p>
+                <p class="py-2 px-2">{{ report.data.problems }}</p>
+                <p class="py-2 px-2">{{ report.data.assessment }}</p>
+                <p class="py-2 px-2">{{ report.data.parts }}</p>
+                <p class="py-2 px-2">{{ report.data.status }}</p>
+                <a href="{{ report.data.file }}" class="py-2 px-2 underline pointer">View Report</a>
+            </li>
+            {%- endif -%}
+        {%- endfor -%}
+        {% endfor %}
+        
+        
+    
+   </ul>
+        
+</section>

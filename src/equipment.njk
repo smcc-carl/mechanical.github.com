@@ -45,7 +45,7 @@
         </thead>
         <tbody>
 {%- for equipment in collections.list | sort(attribute="data.code", case_sensitive=true) -%}
-
+<a href="{{ list.url }}">
             <tr class="uppercase border-b bg-gray-300 text-gray-900">
                 <th scope="row" class="px-6 py-2 font-medium ">
                    {{ equipment.data.code }}
@@ -77,9 +77,12 @@
                 <td class="px-6 py-4 text-red-800 font-bold">
                     {{ equipment.data.remarks }}
                 </td>
+                <td class="px-6 py-4 text-red-800 font-bold">
+                    <a href="{{equipment.url}}">View Report</a>
+                </td>
              
             </tr>
-   
+        </a>  
 {%- endfor -%}        
         </tbody>
     </table>
